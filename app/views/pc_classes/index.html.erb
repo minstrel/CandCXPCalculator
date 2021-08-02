@@ -1,2 +1,136 @@
-<h1>PcClasses#index</h1>
-<p>Find me in app/views/pc_classes/index.html.erb</p>
+<h1>Castles and Crusades Multiclass XP Calculator</h1>
+
+<h2> Make a new selection</h2>
+<%= form_with method: :get do |form| %>
+
+  Select 1st (or Principal) class:
+  <%= select_tag(:name1, options_for_select(@pc_classes)) %>
+
+  <br>
+
+  Select 2nd (or Supporting) class:
+  <%= select_tag(:name2, options_for_select(@pc_classes)) %>
+
+  <br>
+
+  <%= form.submit "Compute" %>
+<% end %>
+
+<h2>You submitted:</h2>
+
+<%= @first_class.name %> and <%= @second_class.name %>
+
+<br>
+<br>
+Standard Multiclass
+<table>
+  <tr>
+    <th>Level</th>
+    <th>XP</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td><%= @first_class.l1 + @second_class.l1 %></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><%= @first_class.l2 + @second_class.l2 %></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><%= @first_class.l3 + @second_class.l3 %></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><%= @first_class.l4 + @second_class.l4 %></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><%= @first_class.l5 + @second_class.l5 %></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><%= @first_class.l6 + @second_class.l6 %></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><%= @first_class.l7 + @second_class.l7 %></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td><%= @first_class.l8 + @second_class.l8 %></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td><%= @first_class.l9 + @second_class.l9 %></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td><%= @first_class.l10 + @second_class.l10 %></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td><%= @first_class.l11 + @second_class.l11 %></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td><%= @first_class.l12 + @second_class.l12 %></td>
+  </tr>
+</table>
+
+<br>
+Class and a Half
+<table>
+  <tr>
+    <th>Level</th>
+    <th>XP</th>
+  </tr>
+  <tr>
+    <td>1/1</td>
+    <td><%= @first_class.l1 + @second_class.l1 / 2 %></td>
+  </tr>
+  <tr>
+    <td>2/1</td>
+    <td><%= @first_class.l2 + @second_class.l2 / 2 + 200 %></td>
+  </tr>
+  <tr>
+    <td>3/1</td>
+    <td><%= @first_class.l3 + @second_class.l3 / 2 + 400 %></td>
+  </tr>
+  <tr>
+    <td>4/2</td>
+    <td><%= @first_class.l4 + @second_class.l4 / 2 + 800 %></td>
+  </tr>
+  <tr>
+    <td>5/2</td>
+    <td><%= @first_class.l5 + @second_class.l5 / 2 + 1500 %></td>
+  </tr>
+  <tr>
+    <td>6/3</td>
+    <td><%= @first_class.l6 + @second_class.l6 / 2 + 3000 %></td>
+  </tr>
+  <tr>
+    <td>7/3</td>
+    <td><%= @first_class.l7 + @second_class.l7 / 2 + 6000 %></td>
+  </tr>
+  <tr>
+    <td>8/4</td>
+    <td><%= @first_class.l8 + @second_class.l8 / 2 + 12000 %></td>
+  </tr>
+  <tr>
+    <td>9/4</td>
+    <td><%= @first_class.l9 + @second_class.l9 / 2 + 25000 %></td>
+  </tr>
+  <tr>
+    <td>10/5</td>
+    <td><%= @first_class.l10 + @second_class.l10 / 2 + 50000 %></td>
+  </tr>
+  <tr>
+    <td>11/5</td>
+    <td><%= @first_class.l11 + @second_class.l11 / 2 + 75000 %></td>
+  </tr>
+  <tr>
+    <td>12/6</td>
+    <td><%= @first_class.l12 + @second_class.l12 / 2 + 50000 %></td>
+  </tr>
+</table>
